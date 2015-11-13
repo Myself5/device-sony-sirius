@@ -13,14 +13,14 @@
 # limitations under the License.
 
 include device/sony/shinano-common/BoardConfig.mk
+include device/sony/shinano-common/BoardConfigOmni.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := D6503
 
 #Reserve space for data encryption (12656259072-16384)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12656242688
 
-BOARD_KERNEL_CMDLINE += coherent_pool=8M mem=2944M
-BUILD_KERNEL := true
+#BOARD_KERNEL_CMDLINE += mem=2690M@255M
 
 MR_DPI := xhdpi
 MR_DPI_FONT := 340
